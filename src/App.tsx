@@ -9,7 +9,7 @@ import {Footer} from "./components/layout/footer/Footer.tsx";
 
 function App() {
     return (
-        <div>
+        <div className={"main-container"}>
             <Header/>
             <Main/>
             <Skills/>
