@@ -2,27 +2,25 @@ import styled from "styled-components";
 import {Icon} from "../../icon/icon.tsx";
 import {FlexWrapper} from "../../FlexWrapper.tsx";
 
+const idSocialList = ["instagram", "telegram", "vk"]
+
 export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper direction="column" align={"center"}>
                 <Name>Anya Tyulkina</Name>
                 <SocialList>
-                    <SocialItem>
-                        <SocialLink href={"#"}>
-                            <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"instagram"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink href={"#"}>
-                            <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"telegram"}/>
-                        </SocialLink>
-                    </SocialItem>
-                    <SocialItem>
-                        <SocialLink href={"#"}>
-                            <Icon width={"21px"} height={"21px"} viewBox={"0 0 21px 21px"} iconId={"vk"}/>
-                        </SocialLink>
-                    </SocialItem>
+                    {
+                        idSocialList.map((item, index) => {
+                            return (
+                                <SocialItem key={index}>
+                                    <SocialLink href={"#"}>
+                                        <Icon width={"21px"} height={"21px"} viewBox={"0 0 21 21"} iconId={item}/>
+                                    </SocialLink>
+                                </SocialItem>
+                            )
+                        })
+                    }
                 </SocialList>
             </FlexWrapper>
             <Copyright>© 2023 Anya Tyulkina, All Rights Reserved.</Copyright>

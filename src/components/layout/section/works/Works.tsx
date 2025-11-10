@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../SectionTitle.tsx";
-import {Navigation} from "../../../Navigatiom/Navigation.tsx";
+import {Navigation} from "../../../Navigation/Navigation.tsx";
 import {Work} from "./work/Work.tsx";
 import photoProject1 from "../../../../assets/images/proj-1.webp"
 import photoProject2 from "../../../../assets/images/proj-4.webp"
 import photoProject3 from "../../../../assets/images/proj-3.webp"
 
-const navigationItems = ["All", "React", "SPA"]
+const navigationItems = ["All", "HTML/CSS", "SPA", "JS"]
 
 export type ProjectType = {
     id: number
@@ -46,7 +46,6 @@ export const Works = () => {
     );
 };
 
-const StyledWorks = styled.div`
+const StyledWorks = styled.section`
     background-color: #89b3ea;
-    min-height: 100vh;
 `

@@ -7,7 +7,7 @@ export const Work = (props: { project: Array<ProjectType> }) => {
     if (!props.project) return null
 
     return (
-        <FlexWrapper justify={"space-around"} align={"center"}>
+        <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} gap={"10px"}>
             {
                 props.project.map((item) => {
                        return <StyledProject key={item.id}>
@@ -22,15 +22,18 @@ export const Work = (props: { project: Array<ProjectType> }) => {
 };
 
 const StyledProject = styled.div`
-    background-color: #c1caae;
+    background-color: #a7b3a5;
     max-width: 400px;
-    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5%;
 `
 
 const Image = styled.img`
     width: 100%;
     height: 260px;
     object-fit: cover;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
 `
 
 const Title = styled.h3`

@@ -1,15 +1,15 @@
-import mainPhoto from "../../../../assets/images/main-photo.webp"
+import mainPhoto from "../../../../assets/images/IMG_0556-Photoroom.png"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../FlexWrapper.tsx";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"}>
+            <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
                 <div>
                     <span>Hi everyone</span>
                     <Name>I am Anna Tyulkina</Name>
-                    <MainTittle>A Web Developer</MainTittle>
+                    <MainTittle>I am studying web dev</MainTittle>
                 </div>
                 <Photo src={mainPhoto} alt="main photo"/>
             </FlexWrapper>
@@ -18,13 +18,38 @@ export const Main = () => {
 };
 
 const Photo = styled.img`
-    width: 350px;
-    height: 350px;
+    max-height: 400px;
     object-fit: cover;
+    background-color: #d7fdfd;
+    border-radius: 40%;
 `
 
 const StyledMain = styled.div`
-    background-color: #cbdca8;
+    background-color: #d7fdfd;
+    
+    @media screen and (max-width: 650px) {
+        img {
+            max-width: 50%;
+        }
+        
+        h1, 
+        h2,
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        img {
+            max-width: 50%;
+        }
+
+        h1,
+        h2,
+        span {
+            font-size: 1rem;
+        }
+    }
 `
 const MainTittle = styled.h1`
 `

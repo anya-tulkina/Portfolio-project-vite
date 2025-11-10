@@ -24,9 +24,14 @@ export const Navigation = (props: NavigationPropsType) => {
 };
 
 const Nav = styled.nav`
+    a {
+        text-decoration-line: none;
+    }
     ul {
         display: flex;
         gap: 20px;
         justify-content: center;
+        list-style: none;
+        flex-wrap: wrap;
     }
 `
