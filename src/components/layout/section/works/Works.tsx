@@ -20,32 +20,32 @@ const project = [
         id: 1,
         title: "SPA",
         src: photoProject1,
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        text: "This is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description"
     },
     {
         id: 2,
         title: "React",
         src: photoProject2,
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        text: "This is sample project description random things are here in description"
     },
     {
         id: 3,
         title: "Redux",
         src: photoProject3,
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        text: "This is sample project description random things are here in description"
     }
 ] as Array<ProjectType>
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>Projects</SectionTitle>
-            <Navigation navigation={navigationItems}/>
-            <Work project={project}/>
+                <SectionTitle>Projects</SectionTitle>
+                <Navigation navigation={navigationItems}/>
+                <Work project={project}/>
         </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
-    background-color: #89b3ea;
+    padding: 20px;
 `

@@ -4,7 +4,7 @@ type NavigationPropsType = {
     navigation?: Array<string>
 }
 
-export const Navigation = (props: NavigationPropsType) => {
+export const HeaderMenu = (props: NavigationPropsType) => {
 
     if (!props.navigation || !Array.isArray(props.navigation)) {
         return null; // или можно вернуть заглушку
@@ -14,10 +14,10 @@ export const Navigation = (props: NavigationPropsType) => {
         <Nav>
             <ul>
                 {props.navigation.map((item, index) => {
-                        return <li key={index}>
-                            <a href="">{item}</a>
-                        </li>
-                    })}
+                    return <li key={index}>
+                        <a href="">{item}</a>
+                    </li>
+                })}
             </ul>
         </Nav>
     );
@@ -28,10 +28,9 @@ const Nav = styled.nav`
         display: flex;
         gap: 30px;
         justify-content: center;
-        padding-bottom: 30px;
-
-        li a {
-            color: #fff;
-        }
+    }
+    
+    ul a {
+        color: #ffff;
     }
 `

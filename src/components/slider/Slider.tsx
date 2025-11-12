@@ -4,9 +4,8 @@ export const Slider = () => {
     return (
         <StyledSlider>
             <Slide>
-                <Text>This is sample project description random things are here in description This is sample project
-                    lorem ipsum generator for dummy content</Text>
-                <Name>Anya Tyulkina</Name>
+                <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Text>
+                <Name>@ivan ivanow</Name>
             </Slide>
             <Pagination>
                 <span> </span>
@@ -18,7 +17,6 @@ export const Slider = () => {
 };
 
 const StyledSlider = styled.div`
-    border: 1px solid red;
     max-width: 500px;
 `
 
@@ -27,24 +25,27 @@ const Slide = styled.div`
 `
 
 const Name = styled.span`
-
+    display: inline-block;
+    padding-bottom: 35px;
 `
 const Text = styled.p`
-
+    padding-bottom: 15px;
 `
 
 const Pagination = styled.div`
+    padding-bottom: 50px;
+    
     span {
         display: inline-block;
         width: 10px;
         height: 10px;
         margin: 5px;
         border-radius: 5px;
-        background-color: #abc0f4;
+        background-color: #fff;
     }
 
     span:nth-child(2) {
         width: 15px;
-        background-color: #6286e1;
+        background-color: #ff6161;
     }
 `

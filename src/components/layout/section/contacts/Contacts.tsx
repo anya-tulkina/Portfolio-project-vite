@@ -5,35 +5,53 @@ import {Button} from "../../../button/Button.tsx";
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <SectionTitle>Contacts</SectionTitle>
-            <StyledForm>
-                <Field placeholder={"name"}/>
-                <Field placeholder={"subject"}/>
-                <Field placeholder={"message"} as={"textarea"}/>
-                <Button type={"submit"}>Send message</Button>
-            </StyledForm>
+                <SectionTitle>Contacts</SectionTitle>
+            <StyledContactsForm>
+                <StyledForm>
+                    <Field placeholder={"name"}/>
+                    <Field placeholder={"subject"}/>
+                    <Field placeholder={"message"} as={"textarea"}/>
+                    <Button type={"submit"}>Send message</Button>
+                </StyledForm>
+            </StyledContactsForm>
         </StyledContacts>
     );
 };
 
 const StyledContacts = styled.section`
-    min-height: 50vh;
-    background-color: #ccf4be;
+    max-height: 20%;
+    height: 100%;
+    padding: 20px;
 `
+
+const StyledContactsForm = styled.div`
+    padding: 30px;
+    
+`
+
 const StyledForm = styled.form`
-    background-color: #ccf4be;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 500px;
+    width: 100%;
     gap: 10px;
+    
     margin: 0 auto;
     
+    textarea {
+        min-height: 150px;
+    }
+
     button {
-        align-self: center;
+        padding: 10px 20px;
+        color: white;
+        background-color: gray;
     }
 `
 const Field = styled.input`
-    background-color: #ccf4be;
-    border: 1px solid rgba(8, 25, 53, 0.92);
-    border-radius: 10px;
+    border: 1px solid rgba(205, 204, 204, 0.55);
+
+    background-color: rgba(69, 82, 99, 0.2);
 `

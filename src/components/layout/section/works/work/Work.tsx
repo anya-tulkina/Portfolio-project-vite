@@ -1,30 +1,42 @@
 import styled from "styled-components";
 import {ProjectType} from "../Works.tsx";
-import {FlexWrapper} from "../../../../FlexWrapper.tsx";
 
 export const Work = (props: { project: Array<ProjectType> }) => {
 
     if (!props.project) return null
 
     return (
-        <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} gap={"10px"}>
+
+        <GridWorkWrapper>
             {
                 props.project.map((item) => {
-                       return <StyledProject key={item.id}>
-                            <Image src={item.src} alt="Project-1"/>
+                    return <StyledProject key={item.id}>
+                        <Image src={item.src} alt="Project-1"/>
+                        <TextProject>
                             <Title>{item.title}</Title>
                             <Text>{item.text}</Text>
-                        </StyledProject>
+                        </TextProject>
+                    </StyledProject>
                 })
             }
-        </FlexWrapper>
+        </GridWorkWrapper>
     );
 };
 
+
+const GridWorkWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    row-gap: 20px;
+`
+
 const StyledProject = styled.div`
     background-color: #a7b3a5;
-    max-width: 400px;
-    margin-bottom: 10px;
+    max-width: 300px;
+    width: 100%;
+    height: fit-content;  /*вытягивает столбец по контенту*/
     border-radius: 5%;
 `
 
@@ -36,11 +48,19 @@ const Image = styled.img`
     border-top-right-radius: 5%;
 `
 
-const Title = styled.h3`
+const TextProject = styled.div`
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    flex-grow: 1;
+`
 
+const Title = styled.h4`
+    text-transform: uppercase;
 `
 
 const Text = styled.p`
-   
 `
 

@@ -1,4 +1,4 @@
-import {Icon} from "../../../icon/icon.tsx";
+import {Icon} from "../../../icon/Icon.tsx";
 import styled from "styled-components";
 
 type SkillPropsType = {
@@ -10,31 +10,22 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} width={"120px"} />
-            <SkillTitle>{props.title}</SkillTitle>
-            <SkillText>{props.description}</SkillText>
+                <Icon iconId={props.iconId} width={"60px"} height={"80"} viewBox={"0 0 120 120"}/>
+            {/*<SkillTitle>{props.title}</SkillTitle>*/}
+            {/*<SkillText>{props.description}</SkillText>*/}
         </StyledSkill>
     );
 };
 
 const StyledSkill = styled.div`
-    max-width: 400px;
-    margin: 5px;
-    background-color: #e4bbbb;
-    text-align: center;
-    box-shadow: 1px 1px 2px #888787;
-    border-radius: 5%;
+    max-width: 300px;
+    height: 100%;
 `
-
-const SkillTitle = styled.h3`
-    margin: 0;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: Josefin Sans;
-    font-size: 16px;
-`
-
-const SkillText = styled.p`
-    font-family: Poppins;
-    font-size: 14px;
-`
+//
+// const SkillTitle = styled.h3`
+//     text-transform: uppercase;
+//     font-size: calc((100vw - 360px) / (1920 - 360) * (20 - 16) + 16px);
+// `
+//
+// const SkillText = styled.p`
+// `

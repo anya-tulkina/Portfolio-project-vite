@@ -7,9 +7,8 @@ export const Main = () => {
         <StyledMain>
             <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"}>
                 <div>
-                    <span>Hi everyone</span>
-                    <Name>I am Anna Tyulkina</Name>
-                    <MainTittle>I am studying web dev</MainTittle>
+                    <Name>I'm Anna Tyulkina</Name>
+                    <MainTittle>I'm studying web dev</MainTittle>
                 </div>
                 <Photo src={mainPhoto} alt="main photo"/>
             </FlexWrapper>
@@ -17,25 +16,11 @@ export const Main = () => {
     );
 };
 
-const Photo = styled.img`
-    max-height: 400px;
-    object-fit: cover;
-    background-color: #d7fdfd;
-    border-radius: 40%;
-`
-
-const StyledMain = styled.div`
-    background-color: #d7fdfd;
+const StyledMain = styled.section`
     
     @media screen and (max-width: 650px) {
         img {
             max-width: 50%;
-        }
-        
-        h1, 
-        h2,
-        span {
-            font-size: 1.5rem;
         }
     }
 
@@ -43,16 +28,20 @@ const StyledMain = styled.div`
         img {
             max-width: 50%;
         }
-
-        h1,
-        h2,
-        span {
-            font-size: 1rem;
-        }
     }
 `
 const MainTittle = styled.h1`
+    font-size: calc((100vw - 360px) / (1920 - 360) * (60 - 30) + 30px);
+    
 `
 
 const Name = styled.h2`
+    font-size: calc((100vw - 360px) / (1920 - 360) * (40 - 30) + 30px);
+    
+`
+
+const Photo = styled.img`
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 40%;
 `
