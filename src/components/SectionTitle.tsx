@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
 export const SectionTitle = styled.h2`
-    color: #fff;
-    text-align: center;
-    font-size: calc((100vw - 360px) / (1920 - 360) * (40 - 24) + 24px);
-    padding-bottom: 40px;
+    color: #000;
+    font-family: "Inconsolata, sans-serif";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 126%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 2px solid #F8F8F8;
+    width: fit-content;
+    
+    padding: 10px;
+    
+    //font-size: calc((100vw - 360px) / (1920 - 360) * (40 - 24) + 24px);
 `

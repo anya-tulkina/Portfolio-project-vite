@@ -61,6 +61,7 @@ const TitleMain = styled.div`
     button {
         margin-top: auto;
         align-items: flex-end;
+        min-height: 80px;
     }
 
     span:first-of-type {

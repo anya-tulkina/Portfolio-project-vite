@@ -1,7 +1,7 @@
-import {SectionTitle} from "../../../SectionTitle.tsx";
+import {SectionTitle} from "../components/SectionTitle.tsx";
 import {Skill} from "./Skill.tsx";
 import styled from "styled-components";
-import {Container} from "../../../Container.tsx";
+import {Container} from "../components/Container.tsx";
 
 const skillList = [
     {

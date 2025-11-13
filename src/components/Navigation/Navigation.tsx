@@ -29,9 +29,5 @@ const Nav = styled.nav`
         gap: 30px;
         justify-content: center;
         padding-bottom: 30px;
-
-        li a {
-            color: #fff;
-        }
     }
 `

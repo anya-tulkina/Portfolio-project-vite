@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.fontColor};
-        //line-height: 1.2px;
+        color: #000;
     }
     
 
@@ -29,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     //
     a {
         text-decoration: none;
+        color: #000;
     }
     
     ul {
@@ -47,12 +48,4 @@ export const GlobalStyle = createGlobalStyle`
 
         padding: 0 5px;
     }
-    
-    // section:nth-of-type(odd) {
-    //     background-color: ${theme.colors.secondaryBg};
-    // }
-    //
-    // section:nth-of-type(even) {
-    //     background-color: ${theme.colors.primaryBg};
-    // }
 `

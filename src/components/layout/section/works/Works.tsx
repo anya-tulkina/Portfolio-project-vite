@@ -65,7 +65,7 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <SectionTitle>Projects</SectionTitle>
+                <SectionTitle>Last works</SectionTitle>
                 <Navigation navigation={navigationItems}/>
                 <Work project={project}/>
             </Container>

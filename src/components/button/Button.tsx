@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     max-width: 250px;
-    min-height: 80px;
 
+    font-family: "Manrope", monospace;
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
