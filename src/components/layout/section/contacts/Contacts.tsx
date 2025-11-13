@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../SectionTitle.tsx";
 import {Button} from "../../../button/Button.tsx";
+import {Container} from "../../../Container.tsx";
 
 export const Contacts = () => {
     return (
         <StyledContacts>
+            <Container>
                 <SectionTitle>Contacts</SectionTitle>
-            <StyledContactsForm>
-                <StyledForm>
-                    <Field placeholder={"name"}/>
-                    <Field placeholder={"subject"}/>
-                    <Field placeholder={"message"} as={"textarea"}/>
-                    <Button type={"submit"}>Send message</Button>
-                </StyledForm>
-            </StyledContactsForm>
+                <StyledContactsForm>
+                    <StyledForm>
+                        <Field placeholder={"name"}/>
+                        <Field placeholder={"subject"}/>
+                        <Field placeholder={"message"} as={"textarea"}/>
+                        <Button type={"submit"}>Send message</Button>
+                    </StyledForm>
+                </StyledContactsForm>
+            </Container>
         </StyledContacts>
     );
 };
@@ -21,12 +24,9 @@ export const Contacts = () => {
 const StyledContacts = styled.section`
     max-height: 20%;
     height: 100%;
-    padding: 20px;
 `
 
 const StyledContactsForm = styled.div`
-    padding: 30px;
-    
 `
 
 const StyledForm = styled.form`
@@ -37,9 +37,10 @@ const StyledForm = styled.form`
     max-width: 500px;
     width: 100%;
     gap: 10px;
-    
+
     margin: 0 auto;
-    
+    padding-bottom: 50px;
+
     textarea {
         min-height: 150px;
     }
@@ -47,7 +48,7 @@ const StyledForm = styled.form`
     button {
         padding: 10px 20px;
         color: white;
-        background-color: gray;
+        text-transform: uppercase;
     }
 `
 const Field = styled.input`

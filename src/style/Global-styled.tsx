@@ -13,29 +13,20 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         margin:  0;
-        font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        font-family: "Manrope", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.fontColor};
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-family: "Playfair Display";
-        font-style: Bold;
-        
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    p {
-        font-weight: 400;
-        font-size: calc((100vw - 360px) / (1920 - 360) * (18 - 14) + 14px);
+        //line-height: 1.2px;
     }
     
+
+    //p {
+    //    font-size: calc((100vw - 360px) / (1920 - 360) * (20 - 15) + 15px);
+    //}
+    //
     a {
         text-decoration: none;
     }
@@ -45,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     button {
-        background-color: none;
+        background: none;
         border: none;
     }
 
@@ -57,11 +48,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0 5px;
     }
     
-    section:nth-of-type(odd) {
-        background-color: ${theme.colors.secondaryBg};
-    }
-
-    section:nth-of-type(even) {
-        background-color: ${theme.colors.primaryBg};
-    }
+    // section:nth-of-type(odd) {
+    //     background-color: ${theme.colors.secondaryBg};
+    // }
+    //
+    // section:nth-of-type(even) {
+    //     background-color: ${theme.colors.primaryBg};
+    // }
 `

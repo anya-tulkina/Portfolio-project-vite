@@ -6,12 +6,10 @@ import {Works} from "./components/layout/section/works/Works.tsx";
 import {Testimony} from "./components/layout/section/testimony/Testimony.tsx";
 import {Contacts} from "./components/layout/section/contacts/Contacts.tsx";
 import {Footer} from "./components/layout/footer/Footer.tsx";
-import {Container} from "./components/Container.tsx";
 
 function App() {
     return (
         <div className={"main-container"}>
-            <Container>
                 <Header/>
                 <Main/>
                 <Skills/>
@@ -19,7 +17,6 @@ function App() {
                 <Testimony/>
                 <Contacts/>
                 <Footer/>
-            </Container>
         </div>
     )
 }

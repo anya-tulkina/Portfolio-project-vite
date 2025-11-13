@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {ProjectType} from "../Works.tsx";
+import {theme} from "../../../../../style/Theme.tsx";
 
 export const Work = (props: { project: Array<ProjectType> }) => {
 
@@ -23,21 +24,32 @@ export const Work = (props: { project: Array<ProjectType> }) => {
     );
 };
 
-
 const GridWorkWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    justify-content: center;
-    justify-items: center;
-    row-gap: 20px;
+    //display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    //justify-content: space-between;
+    
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 100%;
+
+
+    @media (max-width: 1024px) {
+        column-count: 2;
+    }
 `
 
 const StyledProject = styled.div`
-    background-color: #a7b3a5;
-    max-width: 300px;
-    width: 100%;
-    height: fit-content;  /*вытягивает столбец по контенту*/
-    border-radius: 5%;
+    background-color: ${theme.colors.primaryBg};
+    border-radius: 10%;
+    
+    break-inside: avoid; /*предотвращает разрыв между колонками*/
+    margin-bottom: 20px;
+    max-width: 100%;
+
+    //max-width: 350px;
+    //height: fit-content;
 `
 
 const Image = styled.img`
@@ -53,8 +65,6 @@ const TextProject = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    flex-grow: 1;
 `
 
 const Title = styled.h4`

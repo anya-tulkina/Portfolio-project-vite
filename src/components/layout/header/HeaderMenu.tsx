@@ -24,6 +24,7 @@ export const HeaderMenu = (props: NavigationPropsType) => {
 };
 
 const Nav = styled.nav`
+    
     ul {
         display: flex;
         gap: 30px;

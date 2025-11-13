@@ -1,7 +1,7 @@
 import {SectionTitle} from "../../../SectionTitle.tsx";
 import {Skill} from "./Skill.tsx";
 import styled from "styled-components";
-import {FlexWrapper} from "../../../FlexWrapper.tsx";
+import {Container} from "../../../Container.tsx";
 
 const skillList = [
     {
@@ -69,7 +69,7 @@ const skillList = [
 export const Skills = () => {
     return (
         <StyledSkills>
-            <FlexWrapper direction="column" gap={"10px"}>
+            <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <WrapperSkills>
                     {
@@ -82,20 +82,24 @@ export const Skills = () => {
                         })
                     }
                 </WrapperSkills>
-            </FlexWrapper>
+            </Container>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
+    
 `
 
 const WrapperSkills = styled.div`
     display: grid;
-    grid-auto-rows: minmax(120px, auto);
-    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    grid-template-columns: repeat(6, minmax(120px, auto));
     justify-content: space-between;
     justify-items: center;
-    align-items: center;
-    
+
+    padding-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    }
 `

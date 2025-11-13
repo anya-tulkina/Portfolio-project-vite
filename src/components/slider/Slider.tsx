@@ -33,6 +33,7 @@ const Text = styled.p`
 `
 
 const Pagination = styled.div`
+    
     padding-bottom: 50px;
     
     span {

@@ -5,6 +5,7 @@ import {Work} from "./work/Work.tsx";
 import photoProject1 from "../../../../assets/images/proj-1.webp"
 import photoProject2 from "../../../../assets/images/proj-4.webp"
 import photoProject3 from "../../../../assets/images/proj-3.webp"
+import {Container} from "../../../Container.tsx";
 
 const navigationItems = ["All", "HTML/CSS", "SPA", "JS"]
 
@@ -33,19 +34,45 @@ const project = [
         title: "Redux",
         src: photoProject3,
         text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 4,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 5,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 6,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 7,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
     }
 ] as Array<ProjectType>
 
 export const Works = () => {
     return (
         <StyledWorks>
+            <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <Navigation navigation={navigationItems}/>
                 <Work project={project}/>
+            </Container>
         </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
-    padding: 20px;
+    padding-bottom: 20px;
 `

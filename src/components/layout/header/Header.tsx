@@ -21,7 +21,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background: rgba(28, 28, 28, 0.51);
-    padding: 20px 0;
+    padding: 30px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,8 +32,6 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    padding: 0 20px;
 `
 
 const Name = styled.span`
