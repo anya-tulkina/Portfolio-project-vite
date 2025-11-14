@@ -6,6 +6,9 @@ import {Testimony} from "./components/layout/section/testimony/Testimony.tsx";
 import {Contacts} from "./components/layout/section/contacts/Contacts.tsx";
 import {Footer} from "./components/layout/footer/Footer.tsx";
 import {AboutMe} from "./components/layout/section/aboutMe/AboutMe.tsx";
+import {Quote} from "./components/layout/section/quote/Quote.tsx";
+import {Achievement} from "./components/layout/section/achievement/Achievement.tsx";
+import {BLogs} from "./components/layout/section/blogs/BLogs.tsx";
 
 function App() {
     return (
@@ -14,6 +17,9 @@ function App() {
             <Main/>
             <AboutMe/>
             <Works/>
+            <Quote/>
+            <Achievement/>
+            <BLogs/>
             <Testimony/>
             <Contacts/>
             <Footer/>

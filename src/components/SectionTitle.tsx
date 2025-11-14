@@ -8,10 +8,9 @@ export const SectionTitle = styled.h2`
     line-height: 126%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: 2px solid #F8F8F8;
+    border: 1px solid #F8F8F8;
     width: fit-content;
-    
-    padding: 10px;
-    
+
+    margin: 0 auto;
     //font-size: calc((100vw - 360px) / (1920 - 360) * (40 - 24) + 24px);
 `

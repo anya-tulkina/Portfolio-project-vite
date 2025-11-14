@@ -49,14 +49,14 @@ const TextMain = styled.h1`
 `
 
 const TitleMain = styled.div`
+    display: flex;
+    flex-direction: column;
     height: 40%;
+    color: #ffff;
 
     position: absolute;
     top: 40%;
     z-index: 1;
-
-    display: flex;
-    flex-direction: column;
 
     button {
         margin-top: auto;

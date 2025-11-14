@@ -22,11 +22,6 @@ export const GlobalStyle = createGlobalStyle`
         color: #000;
     }
     
-
-    //p {
-    //    font-size: calc((100vw - 360px) / (1920 - 360) * (20 - 15) + 15px);
-    //}
-    //
     a {
         text-decoration: none;
         color: #000;

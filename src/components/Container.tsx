@@ -6,7 +6,6 @@ export const Container = styled.div`
     min-height: 100%;
     margin: 0 auto;
     height: 100%;
-    //overflow: hidden;
     
-    border: 5px solid red;
+    outline: 5px solid red;
 `

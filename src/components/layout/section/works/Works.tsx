@@ -65,7 +65,7 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <SectionTitle>Last works</SectionTitle>
+                <SectionTitle>Latest works</SectionTitle>
                 <Navigation navigation={navigationItems}/>
                 <Work project={project}/>
             </Container>
@@ -74,5 +74,5 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-    padding-bottom: 20px;
+    margin-top: 100px;
 `

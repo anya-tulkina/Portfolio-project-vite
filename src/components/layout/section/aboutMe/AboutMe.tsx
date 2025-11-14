@@ -13,7 +13,7 @@ export const AboutMe = () => {
         <StyledAboutMe>
             <Container>
                 <SectionTitle>Who am i</SectionTitle>
-                <FlexWrapper  justify={"space-between"} gap={"120px"}>
+                <FlexWrapper justify={"space-between"} gap={"120px"}>
                     <InfoAboutMe>
                         <Description>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
                             maiores alias consequatur aut perferendis doloribus asperiores repellat quia voluptas sit
@@ -26,7 +26,7 @@ export const AboutMe = () => {
                             </WrapperIcon>
                         </Button>
                     </InfoAboutMe>
-                    <Skills skills={skills} />
+                    <Skills skills={skills}/>
                 </FlexWrapper>
             </Container>
         </StyledAboutMe>
@@ -36,13 +36,19 @@ export const AboutMe = () => {
 const StyledAboutMe = styled.section`
     min-height: 100%;
     position: relative;
-    
-    padding-top: 100px;
+
+    margin-top: 100px;
+
+    ${SectionTitle} {
+        display: inline-block;
+        left: 0;
+        top: 0;
+    }
 `
 
 const InfoAboutMe = styled.div`
     min-height: 100%;
-    
+
     margin-top: 20px;
 
     button {
@@ -64,7 +70,7 @@ const Description = styled.p`
     letter-spacing: 0.02em;
     font-size: 17px;
     line-height: 238%;
-    
+
     margin-bottom: 60px;
 `
 

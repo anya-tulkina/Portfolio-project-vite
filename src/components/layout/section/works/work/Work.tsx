@@ -22,8 +22,6 @@ export const Work = (props: { project: Array<ProjectType> }) => {
 const GridWorkWrapper = styled.div`
     column-count: 2;
     column-gap: 60px;
-    width: 100%;
-    max-width: 100%;
 
     @media (max-width: 1024px) {
         column-count: 1;
@@ -31,22 +29,25 @@ const GridWorkWrapper = styled.div`
 `
 
 const StyledProject = styled.div`
+    margin-bottom: 60px;
     text-align: end;
+    
     span {
         position: relative;
         
         &::before {
             content: "";
-            background-color: #000;
+            background-color: #2F2F2F;
+        ;
             display: inline-block;
-            height: 1px;
+            
+            height: 3px;
             width: 100%;
             
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
         }
     }
-   padding-bottom: 10px;
 `
 
 const Image = styled.img`
@@ -56,5 +57,9 @@ const Image = styled.img`
 `
 
 const Title = styled.span`
-    text-align: end;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 26px;
+    text-transform: lowercase;
+    color: #2F2F2F;
 `
