@@ -15,7 +15,8 @@ export const Achievement = () => {
     return (
         <StyledAchievement>
             <Container>
-                <SectionTitle>awards and recognition</SectionTitle>
+                <SectionTitle title={"achievement"} subtitle={"awards and recognition"} fontColor={"#111111"}/>
+                {/*<SectionTitle>awards and recognition</SectionTitle>*/}
                 <WrapperAchievement>
                     {
                         AchievementList.map((achievement, index) => {
@@ -34,14 +35,15 @@ export const Achievement = () => {
 };
 
 const StyledAchievement = styled.section`
-    
+    margin-bottom: 120px;
 `
 
 const WrapperAchievement = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 380px);
-    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 60px;
     row-gap: 50px;
+    width: 100%;
     
     margin-top: 50px;
 `

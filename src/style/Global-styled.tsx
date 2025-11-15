@@ -1,5 +1,4 @@
 import {createGlobalStyle} from "styled-components";
-import {theme} from "./Theme.tsx";
 
 export const GlobalStyle = createGlobalStyle`
     
@@ -13,12 +12,11 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         margin:  0;
-        font-family: "Manrope", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        font-family: "Manrope", "Inconsolata", "Jost", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: ${theme.colors.fontColor};
         color: #000;
     }
     

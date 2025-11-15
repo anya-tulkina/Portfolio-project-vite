@@ -9,12 +9,13 @@ export const Main = () => {
             <Container>
                 <TitleMain>
                     <SmallText>hi! everyone</SmallText>
-                    <Name>I'm Anna Tyulkina</Name>
-                    <TextMain>I'm studying web dev</TextMain>
-                    <Button>Get in touch</Button>
+                    <TextMain>Anna{"\n"}Web Dev</TextMain>
+                    <LinkButton>
+                        <Button text={"Get in touch"} />
+                    </LinkButton>
                 </TitleMain>
                 <WrapperMainPhoto>
-                    <Photo src={mainPhoto} alt={"mainPhoto"}/>
+                    <Photo srcSet={""} src={mainPhoto} alt={"mainPhoto"}/>
                 </WrapperMainPhoto>
             </Container>
         </StyledMain>
@@ -32,18 +33,14 @@ const StyledMain = styled.section`
 
 const SmallText = styled.span``
 
-const Name = styled.span`
-    font-size: calc((100vw - 360px) / (1920 - 360) * (40 - 30) + 30px);
-
-    margin-top: 50px;
-`
 
 const TextMain = styled.h1`
-    font-size: calc((100vw - 360px) / (1920 - 360) * (60 - 30) + 30px);
-
+    //font-size: calc((100vw - 360px) / (1920 - 360) * (60 - 30) + 30px);
+    
+    font-size: 7rem;
     font-weight: 800;
-    letter-spacing: 2px;
-    vertical-align: middle;
+    letter-spacing: 0.04em;
+    white-space: pre-wrap;
 
     margin-bottom: 100px;
 `
@@ -55,16 +52,10 @@ const TitleMain = styled.div`
     color: #ffff;
 
     position: absolute;
-    top: 40%;
+    top: 20%;
     z-index: 1;
 
-    button {
-        margin-top: auto;
-        align-items: flex-end;
-        min-height: 80px;
-    }
-
-    span:first-of-type {
+    span:first-child {
         text-transform: uppercase;
         letter-spacing: 0.24em;
         font-family: "Inconsolata", monospace;
@@ -78,13 +69,25 @@ const TitleMain = styled.div`
     }
 `
 
+const LinkButton = styled.a`
+    display: block;
+    margin-top: auto;
+    width: fit-content;
+    
+    button {
+        background-color: transparent;
+        font-size: 19px;
+        line-height: 234.5%;
+        padding: 18px 50px;
+    }
+`
+
 const WrapperMainPhoto = styled.div`
     width: 50%;
     height: 100%;
     position: absolute;
 
     display: flex;
-    align-items: flex-end;
     justify-self: flex-end;
 
     z-index: -1;

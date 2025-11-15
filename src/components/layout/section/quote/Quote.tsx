@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {Container} from "../../../Container.tsx";
-import {SectionTitle} from "../../../SectionTitle.tsx";
 import {FlexWrapper} from "../../../FlexWrapper.tsx";
 
 export const Quote = () => {
@@ -8,7 +7,7 @@ export const Quote = () => {
         <StyledQuote>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"} gap={"80px"}>
-                    <SectionTitle>Quote of the day</SectionTitle>
+                    <Title>Quote of the day</Title>
                     <WrapperQuote>
                         <TextQuote>“Success is not final; failure is not fatal: it is the courage to continue that
                             counts.”</TextQuote>
@@ -25,31 +24,34 @@ const StyledQuote = styled.section`
     margin-top: 200px;
     margin-bottom: 120px;
     width: 100%;
+`
 
-    ${SectionTitle} {
-        font-family: "Jost", sans-serif;;
-        color: #EAEAEA;
-        font-size: 120px;
-        line-height: 150%;
-        border: none;
-        letter-spacing: 0.04em;
+const Title = styled.h2`
 
-        margin-top: 100px;
-        
-        position: relative;
-        
-        &::before {
-            content: "";
-            display: inline-block;
-            background-color: #EAEAEA;
-            width: 220px;
-            height: 4px;
-            
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-        }
+    font-family: "Jost", sans-serif;
+    font-size: 120px;
+    font-weight: 300;
+    color: #EAEAEA;
+    line-height: 150%;
+    border: none;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+
+    margin-top: 100px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        background-color: #EAEAEA;
+        width: 220px;
+        height: 4px;
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
     }
 `
 

@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import {SectionTitle} from "../../../SectionTitle.tsx";
-import {Navigation} from "../../../Navigation/Navigation.tsx";
 import {Work} from "./work/Work.tsx";
 import photoProject1 from "../../../../assets/images/proj-1.webp"
 import photoProject2 from "../../../../assets/images/proj-4.webp"
 import photoProject3 from "../../../../assets/images/proj-3.webp"
 import {Container} from "../../../Container.tsx";
-
-const navigationItems = ["All", "HTML/CSS", "SPA", "JS"]
 
 export type ProjectType = {
     id: number
@@ -52,12 +49,6 @@ const project = [
         title: "Redux",
         src: photoProject3,
         text: "This is sample project description random things are here in description"
-    },
-    {
-        id: 7,
-        title: "Redux",
-        src: photoProject3,
-        text: "This is sample project description random things are here in description"
     }
 ] as Array<ProjectType>
 
@@ -65,8 +56,8 @@ export const Works = () => {
     return (
         <StyledWorks>
             <Container>
-                <SectionTitle>Latest works</SectionTitle>
-                <Navigation navigation={navigationItems}/>
+                <SectionTitle title={"portfolio"} fontColor={"#111111"} subtitle={"Latest works"}/>
+                {/*<SectionTitle>Latest works</SectionTitle>*/}
                 <Work project={project}/>
             </Container>
         </StyledWorks>
