@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import {Container} from "../../Container.tsx";
-import {HeaderMenu} from "./HeaderMenu.tsx";
-
-const navigationItems = ["Home", "About", "Tech Task", "Projects", "Contacts"]
+import {theme} from "../../../style/Theme.tsx";
+import {Icon} from "../../icon/Icon.tsx";
+import {FlexWrapper} from "../../FlexWrapper.tsx";
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <HeaderContainer>
-                    <Name>Anya Tyulkina</Name>
-                    <HeaderMenu navigation={navigationItems}/>
-                </HeaderContainer>
+                <FlexWrapper align={"center"}>
+                    <Icon iconId={"logo"} width={"220px"} height={"35px"} viewBox={"0 0 220 30"}/>
+                </FlexWrapper>
             </Container>
         </StyledHeader>
 
@@ -20,20 +19,6 @@ export const Header = () => {
 
 
 const StyledHeader = styled.header`
-    background: rgba(28, 28, 28, 0.51);
+    background: ${theme.colors.primaryBg};
     padding: 30px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-`
-const HeaderContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-
-const Name = styled.span`
-    font-family: "Malayalam MN";
 `

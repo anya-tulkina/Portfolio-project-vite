@@ -15,13 +15,12 @@ export const Achievement = () => {
     return (
         <StyledAchievement>
             <Container>
-                <SectionTitle title={"achievement"} subtitle={"awards and recognition"} fontColor={"#111111"}/>
-                {/*<SectionTitle>awards and recognition</SectionTitle>*/}
+                <SectionTitle title={"achievement"} subtitle={"awards and recognition"}/>
                 <WrapperAchievement>
                     {
-                        AchievementList.map((achievement, index) => {
+                        AchievementList.map((achievement) => {
                             return (
-                                <AchievementItem key={index}>
+                                <AchievementItem key={achievement.id}>
                                     <TitleAchievement>{achievement.title}</TitleAchievement>
                                     <AchievementText>{achievement.text}</AchievementText>
                                 </AchievementItem>
@@ -35,7 +34,7 @@ export const Achievement = () => {
 };
 
 const StyledAchievement = styled.section`
-    margin-bottom: 120px;
+    padding: 200px 0 120px;
 `
 
 const WrapperAchievement = styled.div`
@@ -45,7 +44,7 @@ const WrapperAchievement = styled.div`
     row-gap: 50px;
     width: 100%;
     
-    margin-top: 50px;
+    padding-top: 50px;
 `
 const AchievementItem = styled.article`
     

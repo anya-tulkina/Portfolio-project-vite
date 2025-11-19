@@ -1,9 +1,16 @@
 export const theme = {
     colors: {
-        primaryBg: "#1C1C1C",
-        secondaryBg: "#2C2C2C",
-        accentColor: "#00C4F0",
+        primaryBg: "#000000",
+        secondaryBg: "#FFFFFF",
 
         fontColor: "#FFFFFF",
+        fontColorSecondary: "#2F2F2F",
+
+        colorButtonBg: "#181818"
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 360px)",
     }
 }

@@ -1,0 +1,81 @@
+import styled from "styled-components";
+import {SectionTitle} from "../../../SectionTitle.tsx";
+import {Work} from "./work/Work.tsx";
+import photoProject1 from "../../../../assets/images/proj-1.webp"
+import photoProject2 from "../../../../assets/images/proj-4.webp"
+import photoProject3 from "../../../../assets/images/proj-3.webp"
+import {Container} from "../../../Container.tsx";
+import {Button} from "../../../Button.tsx";
+
+const project = [
+    {
+        id: 1,
+        title: "SPA",
+        src: photoProject1,
+        text: "This is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description. his is sample project description random things are here in description"
+    },
+    {
+        id: 2,
+        title: "React",
+        src: photoProject2,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 3,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 4,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 5,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    },
+    {
+        id: 6,
+        title: "Redux",
+        src: photoProject3,
+        text: "This is sample project description random things are here in description"
+    }
+]
+
+export const Works = () => {
+    return (
+        <StyledWorks>
+            <Container>
+                    <SectionTitle title={"portfolio"} subtitle={"Latest portfolio"}/>
+                    <WrapperWorks>
+                        {
+                            project.map((item) => {
+                                return (
+                                    <Work key={item.id} src={item.src} title={item.title} />
+                                )
+                            })
+                        }
+                        <Button width={"290px"} elemType='a' img={"arrow"} text={"view all portfolio"}/>
+                    </WrapperWorks>
+            </Container>
+        </StyledWorks>
+    );
+};
+
+const StyledWorks = styled.section`
+    padding: 100px 0 120px;
+`
+
+const WrapperWorks = styled.div`
+
+    column-count: 2;
+    column-gap: 60px;
+
+    @media (max-width: 1024px) {
+        column-count: 1;
+    }
+`

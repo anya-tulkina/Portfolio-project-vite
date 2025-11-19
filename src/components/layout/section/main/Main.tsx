@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import mainPhoto from "../../../../assets/images/IMG_0572.webp"
+import photoBg from "../../../../assets/images/bgMain.webp"
 import {Container} from "../../../Container.tsx";
-import {Button} from "../../../button/Button.tsx";
+import {Button} from "../../../Button.tsx";
+import {theme} from "../../../../style/Theme.tsx";
 
 export const Main = () => {
     return (
@@ -10,13 +11,8 @@ export const Main = () => {
                 <TitleMain>
                     <SmallText>hi! everyone</SmallText>
                     <TextMain>Anna{"\n"}Web Dev</TextMain>
-                    <LinkButton>
-                        <Button text={"Get in touch"} />
-                    </LinkButton>
+                    <Button width={"250px"} height={"80px"} elemType="a" text={"Get in touch"}/>
                 </TitleMain>
-                <WrapperMainPhoto>
-                    <Photo srcSet={""} src={mainPhoto} alt={"mainPhoto"}/>
-                </WrapperMainPhoto>
             </Container>
         </StyledMain>
     );
@@ -24,56 +20,14 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     min-height: 100vh;
-    position: relative;
-    z-index: 0;
+    max-width: 100%;
     overflow: hidden;
 
-    background-color: #000000;
-`
+    background: url(${photoBg}) center no-repeat;
+    background-position: 80% 100%;
+    background-size: contain;
+    background-color: ${theme.colors.primaryBg};
 
-const SmallText = styled.span``
-
-
-const TextMain = styled.h1`
-    //font-size: calc((100vw - 360px) / (1920 - 360) * (60 - 30) + 30px);
-    
-    font-size: 7rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    white-space: pre-wrap;
-
-    margin-bottom: 100px;
-`
-
-const TitleMain = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 40%;
-    color: #ffff;
-
-    position: absolute;
-    top: 20%;
-    z-index: 1;
-
-    span:first-child {
-        text-transform: uppercase;
-        letter-spacing: 0.24em;
-        font-family: "Inconsolata", monospace;
-        font-size: 1.5rem;
-
-        background-color: #6e6c6c;
-        width: fit-content;
-
-        display: inline-block;
-        padding: 0.24em;
-    }
-`
-
-const LinkButton = styled.a`
-    display: block;
-    margin-top: auto;
-    width: fit-content;
-    
     button {
         background-color: transparent;
         font-size: 19px;
@@ -82,20 +36,38 @@ const LinkButton = styled.a`
     }
 `
 
-const WrapperMainPhoto = styled.div`
-    width: 50%;
-    height: 100%;
-    position: absolute;
+const SmallText = styled.span``
 
-    display: flex;
-    justify-self: flex-end;
+const TextMain = styled.h1`
+    //font-size: calc((100vw - 360px) / (1920 - 360) * (60 - 30) + 30px);
 
-    z-index: -1;
-    opacity: 0.6;
+    font-size: 7rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    white-space: pre-wrap;
+
+    margin: 50px 0 35px;
 `
 
-const Photo = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+const TitleMain = styled.div`
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    color: ${theme.colors.fontColor};
+
+    span:first-child {
+        text-transform: uppercase;
+        letter-spacing: 0.24em;
+        font-family: "Inconsolata", monospace;
+        font-size: 1.5rem;
+
+        background-color: #ECECEC2B;
+        width: fit-content;
+
+        padding: 0.24em;
+    }
 `
