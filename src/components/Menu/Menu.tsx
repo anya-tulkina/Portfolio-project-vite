@@ -1,19 +1,13 @@
 import styled from "styled-components";
 
-type NavigationPropsType = {
-    menu?: Array<string>
-}
+const menu = ["home", "about", "Services", "Portfolio", "blogs", "Contact"]
 
-export const Menu = (props: NavigationPropsType) => {
-
-    if (!props.menu || !Array.isArray(props.menu)) {
-        return null; // или можно вернуть заглушку
-    }
+export const Menu = () => {
 
     return (
         <StyledMenu>
             <MenuList>
-                {props.menu.map((item, index) => {
+                {menu.map((item, index) => {
                     return <ManuItem key={index}>
                         <MenuLink href="">{item}</MenuLink>
                     </ManuItem>
@@ -24,8 +18,15 @@ export const Menu = (props: NavigationPropsType) => {
 };
 
 const StyledMenu = styled.nav`
-    padding-right: 80px;
-    width: 300px;
+
+    @media screen and (max-width: 1180px) {
+        grid-area: 3/1/4/3;
+        
+        ul {
+            max-height: 100%;
+            flex-direction: row;
+        }
+    }
 `
 
 const MenuList = styled.ul`
@@ -34,10 +35,14 @@ const MenuList = styled.ul`
     flex-wrap: wrap;
     gap: 40px;
 
+    //width: 100%;
     max-height: 220px;
 `
+
 const ManuItem = styled.li`
+    width: fit-content;
 `
+
 const MenuLink = styled.a`
     font-family: "Rubik", sans-serif;
     letter-spacing: 0.08em;

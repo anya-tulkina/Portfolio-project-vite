@@ -36,9 +36,10 @@ const StyledButton = styled.button<ButtonPropsType>`
     border: 1px solid ${theme.colors.fontColor};
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    cursor: pointer;
     
-    width: ${props => props.width || "200px"};
-    height: ${props => props.height || "60px"};
+    max-width: ${props => props.width || "200px"};
+    min-height: ${props => props.height || "60px"};
 
     display: flex;
     justify-content: center;
@@ -48,6 +49,13 @@ const StyledButton = styled.button<ButtonPropsType>`
     padding: 20px 40px;
     
     white-space: nowrap;
+
+
+
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 const WrapperIcon = styled.div`

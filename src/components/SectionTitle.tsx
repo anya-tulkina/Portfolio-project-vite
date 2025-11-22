@@ -35,7 +35,7 @@ const StyledSectionTitle = styled.div<StyledSectionTitlePropsType>`
 
 const TextTitle = styled.h2<TextTitlePropsType>`
     font-family: "Jost", sans-serif;
-    font-size: 120px;
+    font-size: calc((100vw - 360px) / (1920 - 360) * (120 - 50) + 50px);
     font-weight: 300;
     color: ${props => props.fontColorTitle || "#F8F8F8"};
     line-height: 150%;
@@ -45,21 +45,21 @@ const TextTitle = styled.h2<TextTitlePropsType>`
 
 const SubTitle = styled.span<SubTitlePropsType>`
     font-family: "Inconsolata", monospace;
-    color: ${props => props.fontColor || "#111111"};
-    background-color: ${props => props.bgColor || "#fff"};
+    font-size: calc((100vw - 360px) / (1920 - 360) * (20 - 10) + 10px);
     font-weight: 400;
+    white-space: nowrap;
     line-height: 126%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: ${props => props.fontColor || "#111111"};
+    background-color: ${props => props.bgColor || "#fff"};
     border: ${props => props.borderColor || "1px solid #F8F8F8"};
 
-    padding: 0 12px;
-
     display: inline-block;
+    padding: 0 12px;
 
     position: absolute;
     z-index: 1;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

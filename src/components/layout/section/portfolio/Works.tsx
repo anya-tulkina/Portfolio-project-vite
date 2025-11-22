@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {SectionTitle} from "../../../SectionTitle.tsx";
 import {Work} from "./work/Work.tsx";
 import photoProject1 from "../../../../assets/images/proj-1.webp"
@@ -6,6 +5,8 @@ import photoProject2 from "../../../../assets/images/proj-4.webp"
 import photoProject3 from "../../../../assets/images/proj-3.webp"
 import {Container} from "../../../Container.tsx";
 import {Button} from "../../../Button.tsx";
+import {S} from "./Works_Styled.ts";
+import * as React from "react";
 
 const project = [
     {
@@ -46,12 +47,12 @@ const project = [
     }
 ]
 
-export const Works = () => {
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                     <SectionTitle title={"portfolio"} subtitle={"Latest portfolio"}/>
-                    <WrapperWorks>
+                    <S.WrapperWorks>
                         {
                             project.map((item) => {
                                 return (
@@ -60,22 +61,9 @@ export const Works = () => {
                             })
                         }
                         <Button width={"290px"} elemType='a' img={"arrow"} text={"view all portfolio"}/>
-                    </WrapperWorks>
+                    </S.WrapperWorks>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
 
-const StyledWorks = styled.section`
-    padding: 100px 0 120px;
-`
-
-const WrapperWorks = styled.div`
-
-    column-count: 2;
-    column-gap: 60px;
-
-    @media (max-width: 1024px) {
-        column-count: 1;
-    }
-`

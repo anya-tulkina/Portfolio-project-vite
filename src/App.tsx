@@ -8,7 +8,7 @@ import {AboutMe} from "./components/layout/section/aboutMe/AboutMe.tsx";
 import {Quote} from "./components/layout/section/quote/Quote.tsx";
 import {Achievement} from "./components/layout/section/achievement/Achievement.tsx";
 import {BLogs} from "./components/layout/section/blogs/BLogs.tsx";
-import {Contacts} from "./components/layout/footer/contacts/Contacts.tsx";
+import {Contacts} from "./components/layout/section/contacts/Contacts.tsx";
 
 function App() {
     return (

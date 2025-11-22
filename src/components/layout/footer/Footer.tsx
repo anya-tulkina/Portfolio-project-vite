@@ -38,6 +38,10 @@ const SocialList = styled.ul`
     gap: 66px;
     align-items: center;
     height: 100%;
+    
+    @media screen and (max-width: 1030px) {
+        justify-content: center;
+    }
 `
 
 const SocialItem = styled.li`

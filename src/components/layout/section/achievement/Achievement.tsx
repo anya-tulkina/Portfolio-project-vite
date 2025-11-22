@@ -1,8 +1,10 @@
-import styled from "styled-components";
 import {Container} from "../../../Container.tsx";
 import {SectionTitle} from "../../../SectionTitle.tsx";
+import {FlexWrapper} from "../../../FlexWrapper.tsx";
+import * as React from "react";
+import {S} from "./Achievement_Styled.ts";
 
-const AchievementList = [
+const achievementList = [
     {id: 1, title: "Interior design", text: "Breakthrough designer of the year 2020"},
     {id: 2, title: "Interior design", text: "Breakthrough designer of the year 2020"},
     {id: 3, title: "Interior design", text: "Breakthrough designer of the year 2020"},
@@ -11,69 +13,24 @@ const AchievementList = [
     {id: 6, title: "Interior design", text: "Breakthrough designer of the year 2020"}
 ]
 
-export const Achievement = () => {
+export const Achievement: React.FC = () => {
     return (
-        <StyledAchievement>
+        <S.Achievement>
             <Container>
                 <SectionTitle title={"achievement"} subtitle={"awards and recognition"}/>
-                <WrapperAchievement>
-                    {
-                        AchievementList.map((achievement) => {
-                            return (
-                                <AchievementItem key={achievement.id}>
-                                    <TitleAchievement>{achievement.title}</TitleAchievement>
-                                    <AchievementText>{achievement.text}</AchievementText>
-                                </AchievementItem>
-                            )
-                        })
-                    }
-                </WrapperAchievement>
+                <FlexWrapper justify={"space-between"} gap={"60px"} wrap={"wrap"}>
+                        {
+                            achievementList.map((achievement) => {
+                                return (
+                                    <S.AchievementItem key={achievement.id}>
+                                        <S.TitleAchievement>{achievement.title}</S.TitleAchievement>
+                                        <S.AchievementText>{achievement.text}</S.AchievementText>
+                                    </S.AchievementItem>
+                                )
+                            })
+                        }
+                </FlexWrapper>
             </Container>
-        </StyledAchievement>
+        </S.Achievement>
     );
 };
-
-const StyledAchievement = styled.section`
-    padding: 200px 0 120px;
-`
-
-const WrapperAchievement = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 60px;
-    row-gap: 50px;
-    width: 100%;
-    
-    padding-top: 50px;
-`
-const AchievementItem = styled.article`
-    
-    position: relative;
-    
-    &::before {
-        content: "";
-        background-color: #E2E2E2;
-        width: 355px;
-        height: 1px;
-        bottom: 0;
-        
-        position: absolute;
-    }
-`
-
-const TitleAchievement = styled.h3`
-    color: #111111;
-    font-size: 22px;
-    font-weight: 500;
-`
-
-const AchievementText = styled.p`
-    color: #282828;
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 188%;
-    letter-spacing: 0.02em;
-
-    margin-bottom: 50px;
-    
-`

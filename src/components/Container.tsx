@@ -8,6 +8,4 @@ export const Container = styled.div`
     padding: 0 15px;
     margin: 0 auto;
     height: 100%;
-    
-    outline: 5px solid red;
 `
